@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operators in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operators in C#</h1>
+
+    <p>C# provides several types of operators to perform various types of operations on operands. Here are the different types of operators:</p>
+
+    <ul>
+        <li>Arithmetic operators</li>
+        <li>Relational operators</li>
+        <li>Logical operators</li>
+        <li>Assignment operators</li>
+        <li>Conditional operators</li>
+        <li>Bitwise operators</li>
+    </ul>
+
+    <h2>Arithmetic Operators</h2>
+
+    <p>Arithmetic operators are used to perform mathematical operations on operands. Here are the arithmetic operators in C#:</p>
+
+    <ul>
+        <li><code>+</code> (Addition)</li>
+        <li><code>-</code> (Subtraction)</li>
+        <li><code>*</code> (Multiplication)</li>
+        <li><code>/</code> (Division)</li>
+        <li><code>%</code> (Modulus)</li>
+        <li><code>++</code> (Increment)</li>
+        <li><code>--</code> (Decrement)</li>
+    </ul>
+
+    <p>Here are some examples:</p>
+
+    <pre><code>
+int x = 10;
+int y = 5;
+
+int result = x + y; // result = 15
+result = x - y; // result = 5
+result = x * y; // result = 50
+result = x / y; // result = 2
+result = x % y; // result = 0
+x++; // x = 11
+y--; // y = 4
+    </code></pre>
+
+    <h2>Relational Operators</h2>
+
+    <p>Relational operators are used to compare two operands. Here are the relational operators in C#:</p>
+
+    <ul>
+        <li><code>==</code> (Equal to)</li>
+        <li><code>!=</code> (Not equal to)</li>
+        <li><code>&gt;</code> (Greater than)</li>
+        <li><code>&lt;</code> (Less than)</li>
+        <li><code>&gt;=</code> (Greater than or equal to)</li>
+        <li><code>&lt;=</code> (Less than or equal to)</li>
+    </ul>
+
+    <p>Here are some examples:</p>
+
+    <pre><code>
+int x = 10;
+int y = 5;
+
+bool result = x == y; // result = false
+result = x != y; // result = true
+result = x > y; // result = true
+result = x < y; // result = false
+result = x >= y; // result = true
+result = x <= y; // result = false
+    </code></pre>
+
+    <h2>Logical Operators</h2>
+
+    <p>Logical operators are used to perform logical operations on boolean values. Here are the logical operators in C#:</p>
+
+    <ul>
+        <li><code>&amp;&amp;</code> (Logical AND)</li>
+        <li><code>||</code> (Logical OR)</li>
+        <li><code>!</code> (Logical NOT)</li    </ul>
+
+    <p>Here are some examples:</p>
+
+    <pre><code>
+bool a = true;
+bool b = false;
+
+bool result = a &amp;&amp; b; // result = false
+result = a || b; // result = true
+result = !a; // result = false
+    </code></pre>
+
+    <h2>Assignment Operators</h2>
+
+    <p>Assignment operators are used to assign a value to a variable. Here are the assignment operators in C#:</p>
+
+    <ul>
+        <li><code>=</code> (Assignment)</li>
+        <li><code>+=</code> (Addition assignment)</li>
+        <li><code>-=</code> (Subtraction assignment)</li>
+        <li><code>*=</code> (Multiplication assignment)</li>
+        <li><code>/=</code> (Division assignment)</li>
+        <li><code>%=</code> (Modulus assignment)</li>
+    </ul>
+
+    <p>Here are some examples:</p>
+
+    <pre><code>
+int x = 10;
+
+x += 5; // x = 15
+x -= 3; // x = 12
+x *= 2; // x = 24
+x /= 4; // x = 6
+x %= 2; // x = 0
+    </code></pre>
+
+    <h2>Conditional Operators</h2>
+
+    <p>Conditional operators are used to perform conditional operations. Here is the conditional operator in C#:</p>
+
+    <ul>
+        <li><code>?:</code> (Conditional operator)</li>
+    </ul>
+
+    <p>Here is an example:</p>
+
+    <pre><code>
+int x = 10;
+int y = 5;
+
+int max = x > y ? x : y; // max = 10
+    </code></pre>
+
+    <h2>Bitwise Operators</h2>
+
+    <p>Bitwise operators are used to perform bitwise operations on operands. Here are the bitwise operators in C#:</p>
+
+    <ul>
+        <li><code>&amp;</code> (Bitwise AND)</li>
+        <li><code>|</code> (Bitwise OR)</li>
+        <li><code>^</code> (Bitwise XOR)</li>
+        <li><code>~</code> (Bitwise NOT)</li>
+        <li><code>&lt;&lt;</code> (Left shift)</li>
+        <li><code>&gt;&gt;</code> (Right shift)</li>
+    </ul>
+
+    <p>Bitwise operators are beyond the scope of this basic introduction to C# operators, but they are useful for performing operations at the bit level and for working with binary data.</p>
+
+</body>
+</html>

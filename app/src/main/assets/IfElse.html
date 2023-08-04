@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>If...Else Statements in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>If...Else Statements in C#</h1>
+
+    <p>The <code>if...else</code> statement is used to execute a block of code if a specified condition is true, and another block of code if the condition is false. Here are the different types of <code>if...else</code> statements in C#:</p>
+
+    <h2>Single If...Else Statement</h2>
+
+    <p>The simplest form of <code>if...else</code> statement is a single <code>if</code> statement followed by an <code>else</code> statement. Here's an example:</p>
+
+    <pre><code>
+int x = 10;
+
+if (x > 5)
+{
+    Console.WriteLine("x is greater than 5.");
+}
+else
+{
+    Console.WriteLine("x is less than or equal to 5.");
+}
+    </code></pre>
+
+    <p>In this example, the condition in the <code>if</code> statement is true, so the first block of code is executed, which outputs "x is greater than 5."</p>
+
+    <h2>If...Else If...Else Statement</h2>
+
+    <p>You can also chain multiple <code>if</code> statements together using the <code>else if</code> keyword. Here's an example:</p>
+
+    <pre><code>
+int age = 20;
+
+if (age < 18)
+{
+    Console.WriteLine("You are a minor.");
+}
+else if (age >= 18 && age < 65)
+{
+    Console.WriteLine("You are an adult.");
+}
+else
+{
+    Console.WriteLine("You are a senior citizen.");
+}
+    </code></pre>
+
+    <p>In this example, the age is 20, so the second condition is true, and the corresponding block of code is executed, which outputs "You are an adult."</p>
+
+    <h2>Nested If...Else Statements</h2>
+
+    <p>You can also nest <code>if...else</code> statements inside each other to check for more complex conditions. Here's an example:</p>
+
+    <pre><code>
+int num = 10;
+
+if (num > 0)
+{
+    if (num % 2 == 0)
+    {
+        Console.WriteLine("The number is positive and even.");
+    }
+    else
+    {
+        Console.WriteLine("The number is positive and odd.");
+    }
+}
+else if (num < 0)
+{
+    Console.WriteLine("The number is negative.");
+}
+else
+{
+    Console.WriteLine("The number is zero.");
+}
+    </code></pre>
+
+    <p>In this example, the number is positive and even, so the corresponding block of code is executed, which outputs "The number is positive and even."</p>
+
+    <p>These are just a few examples of what you can do with <code>if...else</code> statements in C#. There are many more ways to use them, and you can also combine them with other programming constructs to create more complex logic.</p>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input in C#</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+		
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+			margin: 30px 0;
+		}
+		
+		h2 {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 20px 0;
+		}
+		
+		p {
+			font-size: 18px;
+			margin: 10px 0;
+		}
+		
+		pre {
+			font-size: 16px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 10px;
+			overflow: auto;
+			margin: 10px 0;
+		}
+		
+		code {
+			font-family: Consolas, monospace;
+			font-size: 16px;
+			color: #333;
+		}
+		
+		ul {
+			font-size: 18px;
+			margin: 10px 0;
+			padding-left: 20px;
+		}
+		
+		li {
+			margin: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>User Input in C#</h1>
+	
+	<p>C# provides several ways to read user input from the console. Here are some of the most common methods:</p>
+	
+	<ul>
+		<li><code>Console.ReadLine()</code></li>
+		<li><code>Console.ReadKey()</code></li>
+		<li><code>Console.Read()</code></li>
+	</ul>
+	
+	<h2><code>Console.ReadLine()</code></h2>
+	
+	<p>The <code>Console.ReadLine()</code> method reads a line of text entered by the user, until the user presses the Enter key. The text is returned as a <code>string</code>. For example:</p>
+	
+	<pre><code>Console.WriteLine("Please enter your name:");
+string name = Console.ReadLine();
+Console.WriteLine("Hello, " + name + "!");</code></pre>
+	
+	<p>In this example, the user is prompted to enter their name, and the input is stored in a <code>string</code> variable called <code>name</code>. The program then uses this value to greet the user.</p>
+	
+	<h2><code>Console.ReadKey()</code></h2>
+	
+	<p>The <code>Console.ReadKey()</code> method reads a single key press from the user, and returns a <code>ConsoleKeyInfo</code> object that represents the key pressed. This method is often used to read input that consists of a single key or a small number of keys. For example:</p>
+	
+	<pre><code>Console.WriteLine("Press any key to continue...");
+Console.ReadKey();</code></pre>
+	
+	<p>In this example, the program prompts the user to press any key to continue, and waits for the user to do so using the <code>Console.ReadKey()</code> method.</p>
+	
+	<h2><code>Console.Read()</code></h2>
+	
+	<p>The <code>Console.Read()</code> method reads a single character from the user, and returns its Unicode value as an <code>int</code>. This method is less commonly used than <code>Console.ReadLine()</code> and <code>Console.ReadKey()</code>, but can be useful in some cases. For example:</p>
+	
+	<pre><code>Console.WriteLine("Please enter a character:");
+int ch = Console.Read();
+Console.WriteLine("You entered: " + (char)ch);</code></pre>
+	
+	<p>In this example, the user is prompted to enter a character, which is then read using the <code>Console.Read()</code> method. The character's Unicode value is stored in an <code>int</code> variable called <code>ch</code>, and is then cast to a <code>char</code> to display the actual character entered by the user.</p>
+	
+	<h2>Conclusion</h2>
+	
+	<p>Reading user input in C# is a common task, and can be accomplished using several methods provided by the <code>Console</code> class. <code>Console.ReadLine()</code> is used to read a line of text, <code>Console.ReadKey()</code> is used to read a single key press, and <code>Console.Read()</code> is used to read a single character. Choose the appropriate method based on your specific input requirements.<//body>
+</html>

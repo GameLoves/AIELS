@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrays in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrays in C#</h1>
+
+    <h2>The Basics</h2>
+
+    <p>An array is a collection of elements of the same type, stored in contiguous memory locations. Here's an example of how to declare and initialize an array in C#:</p>
+
+    <pre><code>
+int[] numbers = { 1, 2, 3, 4, 5 };
+    </code></pre>
+
+    <p>In this example, we are declaring an array of integers named <code>numbers</code>, and initializing it with 5 values. The array index starts at 0, so the first element is <code>numbers[0]</code>, the second element is <code>numbers[1]</code>, and so on.</p>
+
+    <p>You can also declare an array without initializing it, and then assign values to it later, like this:</p>
+
+    <pre><code>
+int[] numbers = new int[5];
+
+numbers[0] = 1;
+numbers[1] = 2;
+numbers[2] = 3;
+numbers[3] = 4;
+numbers[4] = 5;
+    </code></pre>
+
+    <p>In this example, we are declaring an array of integers named <code>numbers</code>, with a length of 5. Then, we are assigning values to each element of the array.</p>
+
+    <h2>Types of Arrays</h2>
+
+    <p>In C#, there are several types of arrays:</p>
+
+    <ul>
+        <li><strong>Single-Dimensional Arrays:</strong> These are the most common type of arrays, where the elements are arranged in a single row or column.</li>
+        <li><strong>Multidimensional Arrays:</strong> These are arrays with more than one dimension, where the elements are arranged in rows and columns.</li>
+        <li><strong>Jagged Arrays:</strong> These are arrays of arrays, where each element of the array is itself an array.</li>
+    </ul>
+
+    <h3>Single-Dimensional Arrays</h3>
+
+    <p>Here's an example of a single-dimensional array:</p>
+
+    <pre><code>
+int[] numbers = { 1, 2, 3, 4, 5 };
+    </code></pre>
+
+    <p>You can access the elements of a single-dimensional array using an index, like this:</p>
+
+    <pre><code>
+int thirdNumber = numbers[2]; // returns 3
+    </code></pre>
+
+    <h3>Multidimensional Arrays</h3>
+
+    <p>Here's an example of a two-dimensional array:</p>
+
+    <pre><code>
+int[,] matrix = new int[3, 3];
+
+matrix[0, 0] = 1;
+matrix[0, 1] = 2;
+matrix[0, 2] = 3;
+
+matrix[1, 0] = 4;
+matrix[1, 1] = 5;
+matrix[1, 2] = 6;
+
+matrix[2, 0] = 7;
+matrix[2, 1] = 8;
+matrix[2, 2] = 9;
+    </code></pre>
+
+    <p>In this example, we are declaring a two-dimensional array of integersnamed <code>matrix</code>, with a length of 3 rows and 3 columns. We are then assigning values to each element of the array using two indices.</p>
+
+    <p>You can access the elements of a multidimensional array using multiple indices, like this:</p>
+
+    <pre><code>
+int fifthElement = matrix[1, 1]; // returns 5
+    </code></pre>
+
+    <h3>Jagged Arrays</h3>
+
+    <p>Here's an example of a jagged array:</p>
+
+    <pre><code>
+int[][] jaggedArray = new int[3][];
+
+jaggedArray[0] = new int[] { 1, 2 };
+jaggedArray[1] = new int[] { 3, 4, 5 };
+jaggedArray[2] = new int[] { 6, 7, 8, 9 };
+    </code></pre>
+
+    <p>In this example, we are declaring an array of arrays named <code>jaggedArray</code>. Each element of the array is itself an array of integers. The first element has 2 elements, the second element has 3 elements, and the third element has 4 elements.</p>
+
+    <p>You can access the elements of a jagged array using multiple indices, like this:</p>
+
+    <pre><code>
+int secondElementThirdValue = jaggedArray[1][2]; // returns 5
+    </code></pre>
+
+    <p>These are just a few examples of how to use arrays in C#. There are many more ways to create, manipulate, and use arrays in your programs.</p>
+</body>
+</html>

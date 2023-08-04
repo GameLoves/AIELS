@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Methods in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Methods in C#</h1>
+
+    <h2>The Basics</h2>
+
+    <p>A method is a block of code that performs a specific task. In C#, you define a method inside a class. Here's an example of a simple method:</p>
+
+    <pre><code>
+public void SayHello()
+{
+    Console.WriteLine("Hello!");
+}
+    </code></pre>
+
+    <p>In this example, we are defining a method named <code>SayHello</code> that does not return a value (the return type is <code>void</code>). The method simply writes "Hello!" to the console.</p>
+
+    <h2>Types of Methods</h2>
+
+    <p>In C#, there are several types of methods:</p>
+
+    <ul>
+        <li><strong>Static Methods:</strong> These are methods that belong to a class, rather than an instance of the class.</li>
+        <li><strong>Instance Methods:</strong> These are methods that belong to an instance of a class.</li>
+        <li><strong>Constructors:</strong> These are special methods that are called when an object of a class is created.</li>
+        <li><strong>Destructors:</strong> These are special methods that are called when an object of a class is destroyed.</li>
+    </ul>
+
+    <h3>Static Methods</h3>
+
+    <p>Here's an example of a static method:</p>
+
+    <pre><code>
+public static int Add(int a, int b)
+{
+    return a + b;
+}
+    </code></pre>
+
+    <p>In this example, we are defining a static method named <code>Add</code> that takes two integer parameters and returns their sum.</p>
+
+    <p>You can call a static method using the class name, like this:</p>
+
+    <pre><code>
+int sum = MyClass.Add(3, 4); // returns 7
+    </code></pre>
+
+    <h3>Instance Methods</h3>
+
+    <p>Here's an example of an instance method:</p>
+
+    <pre><code>
+public void SayHello()
+{
+    Console.WriteLine("Hello!");
+}
+    </code></pre>
+
+    <p>In this example, we are defining an instance method named <code>SayHello</code> that does not return a value. You can call an instance method on an object of the class, like this:</p>
+
+    <pre><code>
+MyClass myObject = new MyClass();
+myObject.SayHello(); // writes "Hello!" to the console
+    </code></pre>
+
+    <h2>Method Parameters</h2>
+
+    <p>In C#, you can pass parameters to a method. This allows you to customize the behavior of the method based on the input values. Here's an example:</p>
+
+    <pre><code>
+public void SayHello(string name)
+{
+    Console.WriteLine("Hello, " + name + "!");
+}
+    </code></pre>
+
+    <p>In this example, we are defining an instance method named <code>SayHello</code> that takes a string parameter named <code>name</code>. The method writes "Hello, " followed by the value of <code>name</code> to the console.</p>
+
+    <p>You can call this method and pass a value for the <code>name</code> parameter, like this:</p>
+
+    <pre><code>
+MyClass myObject = new MyClass();
+myObject.SayHello("John"); // writes "Hello, John!" to the console
+    </code></pre>
+
+    <h2>Method Overriding</h2>
+
+    <p>Method overriding is a feature of object-oriented programming that allows a subclass to provide a specific implementation of a method that is already defined in its superclass. Here's an example:</p>
+
+    <pre><code>
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound.");
+    }
+}
+
+public class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The cat meows.");
+    }
+}
+    </code></pre>
+
+    <p>In this example, we define a base class named <code>Animal</code> with a virtual method named <code>MakeSound</code>. We then define a subclass named <code>Cat</code> which overrides the <code>MakeSound</code> method with its own implementation.</p>
+
+    <p>You can create an instance of the <code>Cat</code> class and call the <code>MakeSound</code> method to see the overridden behavior:</p>
+
+    <pre><code>
+Cat myCat = new Cat();
+myCat.MakeSound(); // writes "The cat meows." to the console
+    </code></pre>
+
+    <h2>Method Overloading</h2>
+
+    <p>Method overloading is a feature of C# that allows you to define multiple methods with the same name but different parameters. Here's an example:</p>
+
+    <pre><code>
+public class Calculator
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+    </code></pre>
+
+    <p>In this example, we define a class named <code>Calculator</code> with two methods named <code>Add</code>. The first method takes two integer parameters and returns their sum, while the second method takes two double parameters and returns their sum.</p>
+
+    <p>You can call either of these methods, and the correct one will be selected based on the parameter types:</p>
+
+    <pre><code>
+Calculator myCalc = new Calculator();
+int sum1 = myCalc.Add(3, 4); // returns 7
+double sum2 = myCalc.Add(2.5, 3.5); // returns 6.0
+    </code></pre>
+
+</body>
+</html>

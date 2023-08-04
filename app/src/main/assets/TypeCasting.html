@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type Casting in C#</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+		
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+			margin: 30px 0;
+		}
+		
+		h2 {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 20px 0;
+		}
+		
+		p {
+			font-size: 18px;
+			margin: 10px 0;
+		}
+		
+		pre {
+			font-size: 16px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 10px;
+			overflow: auto;
+			margin: 10px 0;
+		}
+		
+		code {
+			font-family: Consolas, monospace;
+			font-size: 16px;
+			color: #333;
+		}
+		
+		ul {
+			font-size: 18px;
+			margin: 10px 0;
+			padding-left: 20px;
+		}
+		
+		li {
+			margin: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Type Casting in C#</h1>
+	
+	<p>C# provides the ability to convert a value of one data type to another data type. This is known as type casting. There are two types of type casting in C#: </p>
+	
+	<ul>
+		<li>Implicit Type Casting</li>
+		<li>Explicit Type Casting</li>
+	</ul>
+	
+	<h2>Implicit Type Casting</h2>
+	
+	<p>Implicit type casting is done automatically by the compiler when a conversion from a smaller data type to a larger data type is required. For example:</p>
+	
+	<pre><code>int num = 10;
+double d = num; // Implicit type casting from int to double</code></pre>
+	
+	<p>In this example, the value of the <code>int</code> variable <code>num</code> is implicitly cast to a <code>double</code> variable <code>d</code>.</p>
+	
+	<h2>Explicit Type Casting</h2>
+	
+	<p>Explicit type casting is done by the programmer when a conversion from a larger data type to a smaller data type is required. For example:</p>
+	
+	<pre><code>double d = 10.5;
+int num = (int)d; // Explicit type casting from double to int</code></pre>
+	
+	<p>In this example, the value of the <code>double</code> variable <code>d</code> is explicitly cast to an <code>int</code> variable <code>num</code>.</p>
+	
+	<p>It is important to note that when casting from a larger data type to a smaller data type, there is a risk of data loss. For example, when casting from a <code>double</code> to an <code>int</code>, any decimal places will be lost.</p>
+	
+	<h2>Conclusion</h2>
+	
+	<p>Type casting is an important concept in C# that allows for the conversion of values from one data type to another. Implicit type casting is done automatically by the compiler, while explicit type casting is done by the programmer. When casting from a larger data type to a smaller data type, there is a risk of data loss.</p>
+</body>
+</html>

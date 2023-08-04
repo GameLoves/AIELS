@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Math in C#</h1>
+
+    <p>C# provides a <code>Math</code> class that contains various static methods for performing mathematical operations. Here are some of the methods provided by the <code>Math</code> class:</p>
+
+    <ul>
+        <li><code>Abs</code> - Returns the absolute value of a number.</li>
+        <li><code>Acos</code> - Returns the arccosine of a number.</li>
+        <li><code>Asin</code> - Returns the arcsine of a number.</li>
+        <li><code>Atan</code> - Returns the arctangent of a number.</li>
+        <li><code>Atan2</code> - Returns the angle whose tangent is the quotient of two specified numbers.</li>
+        <li><code>Ceiling</code> - Returns the smallest integer greater than or equal to a number.</li>
+        <li><code>Cos</code> - Returns the cosine of a number.</li>
+        <li><code>Cosh</code> - Returns the hyperbolic cosine of a number.</li>
+        <li><code>Exp</code> - Returns e raised to the specified power.</li>
+        <li><code>Floor</code> - Returns the largest integer less than or equal to a number.</li>
+        <li><code>IEEERemainder</code> - Returns the remainder resulting from the division of two specified numbers.</li>
+        <li><code>Log</code> - Returns the natural (base e) logarithm of a specified number.</li>
+        <li><code>Log10</code> - Returns the base 10 logarithm of a specified number.</li>
+        <li><code>Max</code> - Returns the larger of two specified numbers.</li>
+        <li><code>Min</code> - Returns the smaller of two specified numbers.</li>
+        <li><code>Pow</code> - Returns a specified number raised to the specified power.</li>
+        <li><code>Round</code> - Rounds a number to the nearest integer or to a specified number of decimal places.</li>
+        <li><code>Sign</code> - Returns a value indicating the sign of a number.</li>
+        <li><code>Sin</code> - Returns the sine of a number.</li>
+        <li><code>Sinh</code> - Returns the hyperbolic sine of a number.</li>
+        <li><code>Sqrt</code> - Returns the square root of a specified number.</li>
+        <li><code>Tan</code> - Returns the tangent of a number.</li>
+        <li><code>Tanh</code> - Returns the hyperbolic tangent of a number.</li>
+        <li><code>Truncate</code> - Calculates the integral part of a specified number.</li>
+    </ul>
+
+    <h2>Examples</h2>
+
+    <p>Here are some examples of using the <code>Math</code> class:</p>
+
+    <pre><code>
+double x = 3.14;
+double y = -2.5;
+
+// Absolute value
+double absX = Math.Abs(x); // absX = 3.14
+double absY = Math.Abs(y); // absY =2.5
+
+// Ceiling and floor
+double ceilX = Math.Ceiling(x); // ceilX = 4
+double floorY = Math.Floor(y); // floorY = -3
+
+// Maximum and minimum
+double maxXY = Math.Max(x, y); // maxXY = 3.14
+double minXY = Math.Min(x, y); // minXY = -2.5
+
+// Rounding
+double roundX = Math.Round(x); // roundX = 3
+double roundY = Math.Round(y, 1); // roundY = -2.5
+
+// Truncating
+double truncX = Math.Truncate(x); // truncX = 3
+double truncY = Math.Truncate(y); // truncY = -2
+    </code></pre>
+
+    <p>These are just a few examples of what you can do with the <code>Math</code> class in C#. There are many more methods available, and you can also combine them to create more complex calculations.</p>
+</body>
+</html>

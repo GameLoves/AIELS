@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Loops in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>For Loops in C#</h1>
+
+    <p>The <code>for</code> loop is used to execute a block of code repeatedly, for a specified number of times. Here's the basic syntax of a <code>for</code> loop:</p>
+
+    <pre><code>
+for (initialization; condition; increment/decrement)
+{
+    // code to execute while condition is true
+}
+    </code></pre>
+
+    <p>The <code>for</code> loop consists of three parts: the initialization statement, the condition statement, and the increment/decrement statement. The initialization statement is executed once, before the loop starts. The condition statement is evaluated at the beginning of each iteration, and if it is true, the code inside the loop is executed. The increment/decrement statement is executed at the end of each iteration. Here's an example:</p>
+
+    <pre><code>
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+    </code></pre>
+
+    <p>In this example, the loop executes 5 times, with <code>i</code> starting at 0 and incrementing by 1 each time. The output of this code is:</p>
+
+    <pre><code>
+0
+1
+2
+3
+4
+    </code></pre>
+
+    <p>There are several variations of the <code>for</code> loop in C#, including the <code>foreach</code> loop, which is used to iterate over collections, and the <code>for</code> loop with multiple initialization statements. Here's an example of a <code>foreach</code> loop:</p>
+
+    <pre><code>
+int[] numbers = { 1, 2, 3, 4, 5 };
+
+foreach (int number in numbers)
+{
+    Console.WriteLine(number);
+}
+    </code></pre>
+
+    <p>In this example, the loop iterates over the array of integers, outputting each value to the console. The output of this code is:</p>
+
+    <pre><code>
+1
+2
+3
+4
+5
+    </code></pre>
+
+    <p>Here's an example of a <code>for</code> loop with multiple initialization statements:</p>
+
+    <pre><code>
+for (int i = 0, j = 10; i < j; i++, j--)
+{
+    Console.WriteLine($"i = {i}, j = {j}");
+}
+    </code></pre>
+
+    <p>In this example, the loop executes 5 times, with two initialization statements: <code>i</code> starts at 0 and <code>j</code> starts at 10. Each time the loop iterates, <code>i</code> increments by 1 and <code>j</code> decrements by 1. The output of this code is:</p>
+
+    <pre><code>
+i = 0, j = 10
+i = 1, j = 9
+i = 2, j = 8
+i = 3, j = 7
+i = 4, j = 6
+    </code></pre>
+
+    <p>These are just a few examples of what you can do with <code>for</code> loops in C#. There aremany more ways to use them, and you can also combine them with other programming constructs to create more complex logic.</p>
+</body>
+</html>

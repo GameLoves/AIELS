@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C# Data Types</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #f2f2f2;
+			color: #333;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1, pre, code {
+			color: #333;
+		}
+
+		h1 {
+			font-size: 48px;
+			margin: 0;
+			padding: 20px;
+			text-shadow: 2px 2px #fff;
+		}
+
+		pre {
+			background-color: #fff;
+			color: #333;
+			font-size: 14px;
+			padding: 10px;
+			overflow-x: auto;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		code {
+			background-color: #f2f2f2;
+			color: #333;
+			font-size: 14px;
+			padding: 2px 4px;
+			border-radius: 3px;
+		}
+
+		.comment {
+			color: #999;
+			font-style: italic;
+		}
+
+		p {
+			margin: 0 0 20px;
+		}
+
+		ul {
+			margin: 0 0 20px;
+			padding: 0 0 0 20px;
+		}
+
+		li {
+			margin: 0 0 10px;
+		}
+
+		li strong {
+			font-weight: bold;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		.section {
+			margin-bottom: 40px;
+		}
+
+		.section-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 0 0 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.section-body {
+			font-size: 18px;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>C# Data Types</h1>
+		<div class="section">
+			<h2 class="section-title">Basic Data Types</h2>
+			<div class="section-body">
+				<p>C# is a strongly-typed language, which means that every variable and constant must be declared with a specific data type. The following are the basic data types available in C#:</p>
+				<ul>
+					<li><strong>bool:</strong> A boolean value that can be either true or false.</li>
+					<li><strong>byte:</strong> An 8-bit unsigned integer that can hold values from 0 to 255.</li>
+					<li><strong>char:</strong> A single Unicode character that can be any character in the Unicode standard, including letters, digits, and symbols.</li>
+					<li><strong>decimal:</strong> A decimal value with 28-29 significant digits that is used for financial and monetary calculations.</li>
+					<li><strong>double:</strong> A double-precision floating-point value that can hold values with up to 15-16 digits.</li>
+					<li><strong>float:</strong> A single-precision floating-point value that can hold values with up to 7 digits.</li>
+					<li><strong>int:</strong> A 32-bit signed integer that can hold values from -2,147,483,648 to 2,147,483,647.</li>
+					<li><strong>long:</strong> A 64-bit signed integer that can hold values from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.</li>
+					<li><strong>sbyte:</strong> An 8-bit signed integer that can hold values from -128 to 127.</li>
+					<li><strong>short:</strong> A 16-bit signed integer that can hold values from -32,768 to 32,767.</li>
+					<li><strong>uint:</strong> A 32-bit unsigned integer that can hold values from 0 to 4,294,967,295.</li>
+					<li><strong>ulong:</strong> A 64-bit unsigned integer that can hold valuesfrom 0 to 18,446,744,073,709,551,615.</li>
+					<li><strong>ushort:</strong> A 16-bit unsigned integer that can hold values from 0 to 65,535.</li>
+				</ul>
+				<p>In addition to these basic data types, C# also supports more complex data types such as arrays, structures, and classes. These data types allow you to organize and manipulate data in more sophisticated ways.</p>
+			</div>
+		</div>
+		<div class="section">
+			<h2 class="section-title">Declaring Variables</h2>
+			<div class="section-body">
+				<p>To declare a variable in C#, you need to specify its data type and name:</p>
+				<pre><code>int age;</code></pre>
+				<p>This declares a variable named <code>age</code> of type <code>int</code>.</p>
+				<p>You can also assign an initial value to the variable when you declare it:</p>
+				<pre><code>int age = 30;</code></pre>
+				<p>This declares a variable named <code>age</code> of type <code>int</code> and initializes it with a value of <code>30</code>.</p>
+			</div>
+		</div>
+		<div class="section">
+			<h2 class="section-title">Type Conversion</h2>
+			<div class="section-body">
+				<p>Sometimes you may need to convert a variable from one data type to another. This is known as type conversion. C# provides two ways to perform type conversion: implicit and explicit.</p>
+				<ul>
+					<li><strong>Implicit conversion:</strong> This occurs when the compiler automatically converts a value from one data type to another. For example, you can assign an <code>int</code> value to a <code>double</code> variable without any explicit conversion.</li>
+					<li><strong>Explicit conversion:</strong> This occurs when you manually convert a value from one data type to another using a type cast. For example, you can convert a <code>double</code> value to an <code>int</code> using the following code:</li>
+				</ul>
+				<pre><code>double d = 3.14;
+int i = (int)d;</code></pre>
+				<p>Here, the <code>double</code> value <code>3.14</code> is explicitly converted to an <code>int</code> using a type cast.</p>
+				<p>It's important to note that type conversion can sometimes result in a loss of precision or data. For example, converting a <code>double</code> to an <code>int</code> will result in the loss of any fractional part of the value.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

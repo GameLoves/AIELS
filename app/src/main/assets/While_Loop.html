@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>While Loops in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>While Loops in C#</h1>
+
+    <p>The <code>while</code> loop is used to execute a block of code repeatedly, as long as a specified condition is true. Here's the basic syntax of a <code>while</code> loop:</p>
+
+    <pre><code>
+while (condition)
+{
+    // code to execute while condition is true
+}
+    </code></pre>
+
+    <p>The code inside the curly braces is executed repeatedly as long as the condition inside the parentheses is true. Here's an example:</p>
+
+    <pre><code>
+int i = 0;
+
+while (i < 5)
+{
+    Console.WriteLine(i);
+    i++;
+}
+    </code></pre>
+
+    <p>In this example, the value of <code>i</code> starts at 0, and the code inside the <code>while</code> loop is executed repeatedly as long as <code>i</code> is less than 5. Each time the code is executed, the value of <code>i</code> is incremented by 1, and the current value of <code>i</code> is output to the console. The output of this code is:</p>
+
+    <pre><code>
+0
+1
+2
+3
+4
+    </code></pre>
+
+    <p>You can also use the <code>while</code> loop with other programming constructs, such as the <code>break</code> and <code>continue</code> statements. Here's an example that uses both:</p>
+
+    <pre><code>
+int num = 0;
+
+while (num < 10)
+{
+    num++;
+
+    if (num == 5)
+    {
+        continue;
+    }
+
+    if (num == 8)
+    {
+        break;
+    }
+
+    Console.WriteLine(num);
+}
+    </code></pre>
+
+    <p>In this example, the loop continues to execute as long as <code>num</code> is less than 10. Inside the loop, <code>num</code> is incremented by 1 each time, and then two conditional statements are evaluated. The first conditional uses the <code>continue</code> statement to skip the current iteration of the loop if <code>num</code> is 5. The second conditional uses the <code>break</code> statement to exit the loop if <code>num</code> is 8. The output of this code is:</p>
+
+    <pre><code>
+1
+2
+3
+4
+6
+7
+    </code></pre>
+
+    <p>These are just a few examples of what you can do with <code>while</code> loops in C#. There are many more ways to use them, and you can also combine them with other programming constructs to create more complex logic.</p>
+</body>
+</html>

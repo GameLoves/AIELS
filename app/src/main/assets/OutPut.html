@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>C# Output in HTML</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, h2, code, pre {
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 48px;
+        margin: 0;
+        padding: 20px;
+        text-shadow: 2px 2px #000;
+      }
+
+      h2 {
+        font-size: 36px;
+        margin: 20px 0 10px;
+      }
+
+      pre {
+        background-color: #fff;
+        color: #000;
+        font-size: 14px;
+        padding: 10px;
+        overflow-x: auto;
+      }
+
+      code {
+        background-color: #f0f0f0;
+        color: #000;
+        font-size: 14px;
+        padding: 2px 4px;
+      }
+
+      p {
+        margin: 0 0 20px;
+      }
+
+      .output {
+        background-color: #fff;
+        color: #000;
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>C# Output in HTML</h1>
+    <p>
+      Outputting text in C# is easy using the <code>Console.WriteLine()</code> method. Here's an example:
+    </p>
+    <pre><code>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, world!");
+    }
+}
+    </code></pre>
+    <p>
+      This code will output the string "Hello, world!" to the console, followed by a newline character. To output text to an HTML page, you can use the <code>Response.Write()</code> method in an ASP.NET application, like this:
+    </p>
+    <pre><code>
+using System;
+using System.Web.UI;
+
+public partial class Default : Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Response.Write("Hello, world!");
+    }
+}
+    </code></pre>
+    <p>
+      This code will output the string "Hello, world!" to the HTML page, without a newline character. You can also use the <code>Response.Write()</code> method to output HTML code, like this:
+    </p>
+    <pre><code>
+using System;
+using System.Web.UI;
+
+public partial class Default : Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Response.Write("&lt;h2&gt;Welcome to my website!&lt;/h2&gt;");
+    }
+}
+    </code></pre>
+    <p>
+      This code will output the HTML code "&lt;h2&gt;Welcome to my website!&lt;/h2&gt;" to the HTML page, which will be rendered as a second-level heading.
+    </p>
+    <div class="output">
+      Hello, world!
+    </div>
+  </body>
+</html>

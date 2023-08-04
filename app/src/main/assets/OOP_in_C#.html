@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object-Oriented Programming in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Object-Oriented Programming in C#</h1>
+
+    <h2>Introduction to Object-Oriented Programming</h2>
+
+    <p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects to represent data and behavior. In OOP, we model the real-world entities as objects, which have data and behavior. C# is an object-oriented language, which means that it supports OOP concepts such as encapsulation, inheritance, and polymorphism.</p>
+
+    <h3>Classes and Objects</h3>
+
+    <p>In C#, a class is a blueprint for creating objects. A class defines the data and behavior of an object. An object is an instance of a class. When you create an object, you are creating an instance of the class. Here's an example:</p>
+
+    <pre><code>
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public void SayHello()
+    {
+        Console.WriteLine("Hello, my name is " + Name + " and I am " + Age + " years old.");
+    }
+}
+
+Person john = new Person();
+john.Name = "John";
+john.Age = 30;
+john.SayHello(); // writes "Hello, my name is John and I am 30 years old." to the console
+    </code></pre>
+
+    <p>In this example, we define a class named <code>Person</code> with two properties named <code>Name</code> and <code>Age</code>, and a method named <code>SayHello</code>. We then create an object of the <code>Person</code> class named <code>john</code>, set its properties, and call its <code>SayHello</code> method.</p>
+
+    <h3>Encapsulation</h3>
+
+    <p>Encapsulation is the concept of hiding the implementation details of a class from the outside world and exposing only what is necessary. In C#, we use access modifiers such as <code>public</code>, <code>private</code>, <code>protected</code>, and <code>internal</code> to control the access to the members of a class. Here's an example:</p>
+
+    <pre><code>
+public class BankAccount
+{
+    private decimal balance;
+
+    public void Deposit(decimal amount)
+    {
+        balance += amount;
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (amount <= balance)
+        {
+            balance -= amount;
+        }
+        else
+        {
+            throw new ArgumentException("Insufficient funds.");
+        }
+    }
+
+    public decimal GetBalance()
+    {
+        return balance;
+    }
+}
+
+BankAccount myAccount = new BankAccount();
+myAccount.Deposit(1000);
+myAccount.Withdraw(500);
+decimal myBalance = myAccount.GetBalance(); // returns 500
+    </code></pre>
+
+    <p>In this example, we define a class named <code>BankAccount</code> with a private field named <code>balance</code> and three public methods named <code>Deposit</code>, <code>Withdraw</code>, and <code>GetBalance</code>. The <code>balance</code> field is hidden from the outside world and can only be modified through the <code>Deposit</code> and <code>Withdraw</code> methods. The <code>GetBalance</code> method is the only way to retrieve the balance of the account from the outside world.</p>
+
+    <h3>Inheritance</h3>
+
+    <p>Inheritance is the concept of creating a new class from an existing class. The new class, called the derived class or subclass, inherits the data and behavior of the existing class, called the base class or superclass. In C#, we use the <code>:</code> symbol to indicate inheritance. Here's an example:</p>
+
+    <pre><code>
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("The animal is eating.");
+    }
+}
+
+public class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("The cat is meowing.");
+    }
+}
+
+Cat myCat = new Cat();
+myCat.Eat(); // writes "The animal is eating." to the console
+myCat.Meow(); // writes "The cat is meowing." to the console
+    </code></pre>
+
+    <p>In this example, we define a base class named <code>Animal</code> with a method named <code>Eat</code>, and a derived class named <code>Cat</code> that inherits from the <code>Animal</code> class and adds a method named <code>Meow</code>. We then create an object of the <code>Cat</code> class named <code>myCat</code>, and call its <code>Eat</code> and <code>Meow</code> methods.</p>
+
+    <h3>Polymorphism</h3>
+
+    <p>Polymorphism is the concept of using a single interface to represent multiple forms. In C#, we use inheritance and interfaces to achieve polymorphism. Here's an example:</p>
+
+    <pre><code>
+public interface IShape
+{
+    double CalculateArea();
+}
+
+public class Rectangle : IShape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    public double CalculateArea()
+    {
+        return Width * Height;
+    }
+}
+
+public class Circle : IShape
+{
+    public double Radius { get; set; }
+
+    public double CalculateArea()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
+
+IShape[] shapes = new IShape[2];
+shapes[0] = new Rectangle() { Width = 10, Height = 5 };
+shapes[1] = new Circle() { Radius = 5 };
+
+foreach (IShape shape in shapes)
+{
+    Console.WriteLine("Area = " + shape.CalculateArea());
+}
+    </code></pre>
+
+    <p>In this example, we define an interface named <code>IShape</code> with a method named <code>CalculateArea</code>, and two classes named <code>Rectangle</code> and <code>Circle</code> that implement the <code>IShape</code> interface and provide their own implementation of the <code>CalculateArea</code> method. We then create an array of <code>IShape</code> objects, which can hold objects of any class that implements the <code>IShape</code> interface, and populate it with a <code>Rectangle</code> and a <code>Circle</code> object. Finally, we iterate over the array and call the <code>CalculateArea</code> method on each object, which produces different results depending on the type of object.</p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>C# Comments in HTML</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        color: #333;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, pre, code {
+        color: #333;
+      }
+
+      h1 {
+        font-size: 48px;
+        margin: 0;
+        padding: 20px;
+        text-shadow: 2px 2px #fff;
+      }
+
+      pre {
+        background-color: #fff;
+        color: #333;
+        font-size: 14px;
+        padding: 10px;
+        overflow-x: auto;
+      }
+
+      code {
+        background-color: #f2f2f2;
+        color: #333;
+        font-size: 14px;
+        padding: 2px 4px;
+      }
+
+      .comment {
+        color: #999;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>C# Comments in HTML</h1>
+    <p>
+      Here's an example of how to use comments in C# to add notes and explanations to your code:
+    </p>
+    <pre><code>
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // This is a single-line comment
+            Console.WriteLine("Hello, world!"); <span class="comment">// Output the greeting</span>
+
+            /* This is a
+               multi-line comment */
+
+            /* This is another
+               multi-line comment */
+        }
+    }
+}
+    </code></pre>
+    <p>
+      In this example, we have added three types of comments to the code:
+    </p>
+    <ul>
+      <li><strong>Single-line comments:</strong> These comments begin with two forward slashes (<code>//</code>) and continue until the end of the line. Single-line comments are often used to add brief notes or explanations to individual lines of code. In this example, we have added a single-line comment to explain what the <code>Console.WriteLine()</code> method does.</li>
+      <li><strong>Multi-line comments:</strong> These comments begin with a forward slash followed by an asterisk (<code>/*</code>) and end with an asterisk followed by a forward slash (<code>*/</code>). Multi-line comments can span multiple lines and are often used to add more detailed explanations or notes to larger sections of code. In this example, we have added two multi-line comments to show how to create comments that span multiple lines.</li>
+      <li><strong>XML comments:</strong> These comments begin with three forward slashes (<code>///</code>) and are used to add documentation to classes, methods, and other program elements. XML comments can be processed by tools such as Visual Studio to generate documentation for your code. We have not included an example of this type of comment in this code snippet.</li>
+    </ul>
+  </body>
+</html>

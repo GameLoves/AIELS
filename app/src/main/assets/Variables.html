@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>C# Variables</title>
+    <style>
+      body {
+        background-image: url('https://images.unsplash.com/photo-1615304025949-1a9d7d91a5a8');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        color: #fff;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 48px;
+        text-shadow: 2px 2px #000;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      nav li {
+        margin-right: 20px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      h2 {
+        font-size: 36px;
+        margin-top: 0;
+        text-shadow: 2px 2px #000;
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      pre {
+        background-color: #fff;
+        color: #000;
+        padding: 10px;
+        overflow-x: auto;
+      }
+
+      code {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>C# Variables</h1>
+      <nav>
+        <ul>
+          <li><a href="#types">Types</a></li>
+          <li><a href="#declaration">Declaration</a></li>
+          <li><a href="#assignment">Assignment</a></li>
+          <li><a href="#scope">Scope</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="types">
+        <h2>Types</h2>
+        <p>C# supports a variety of data types for variables, including:</p>
+        <ul>
+          <li><strong>int</strong>: for storing whole numbers (e.g. 1, 2, -3)</li>
+          <li><strong>float</strong>: for storing floating-point numbers (e.g. 3.14, -0.5)</li>
+          <li><strong>double</strong>: for storing double-precision floating-point numbers (e.g. 3.14159, -0.5)</li>
+          <li><strong>bool</strong>: for storing true or false values</li>
+          <li><strong>string</strong>: for storing text</li>
+          <li><strong>char</strong>: for storing a single character</li>
+          <li><strong>decimal</strong>: for storing decimal numbers with high precision (e.g. currency values)</li>
+          <li><strong>object</strong>: for storing any type of data</li>
+        </ul>
+      </section>
+      <section id="declaration">
+        <h2>Declaration</h2>
+        <p>To declare a variable in C#, you need to specify its type and name. Here's an example:</p>
+        <pre>
+          <code>
+            int age;
+            string name;
+          </code>
+        </pre>
+        <p>In this example, we've declared two variables: <code>age</code> (an integer) and <code>name</code> (a string).</p>
+      </section>
+      <section id="assignment">
+        <h2>Assignment</h2>
+        <p>Once you've declared a variable, you can assign a value to it using the <code>=</code> operator. Here's an example:</p>
+        <pre>
+          <code>
+            age = 30;
+            name = "Alice";
+          </code>
+        </pre>
+        <p>In this example, we've assigned the value <code>30</code> to the <code>age</code> variable and the value <code>"Alice"</code> to the <code>name</code> variable.</p>
+      </section>
+      <section id="scope">
+        <h2>Scope</h2>
+        <p>The scope of a variable determines where it can be accessed in your code. In C#, variables can have either local or globalscope.</p>
+        <ul>
+          <li><strong>Local variables</strong> are declared inside a function or block of code, and can only be accessed within that function or block.</li>
+          <li><strong>Global variables</strong> are declared outside of any function or block of code, and can be accessed from anywhere in your code.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

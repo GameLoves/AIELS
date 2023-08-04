@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classes and Objects in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Classes and Objects in C#</h1>
+
+    <h2>Introduction to Classes and Objects</h2>
+
+    <p>A class is a blueprint or template for creating objects, which are instances of the class. In C#, a class defines the data and behavior of an object. Here's an example:</p>
+
+    <pre><code>
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public void SayHello()
+    {
+        Console.WriteLine("Hello, my name is " + Name + " and I am " + Age + " years old.");
+    }
+}
+
+Person john = new Person();
+john.Name = "John";
+john.Age = 30;
+john.SayHello(); // writes "Hello, my name is John and I am 30 years old." to the console
+    </code></pre>
+
+    <p>In this example, we define a class named <code>Person</code> with two properties named <code>Name</code> and <code>Age</code>, and a method named <code>SayHello</code>. We then create an object of the <code>Person</code> class named <code>john</code>, set its properties, and call its <code>SayHello</code> method.</p>
+
+    <h3>Types of Classes</h3>
+
+    <p>In C#, there are different types of classes based on their accessibility and behavior. Here are some of the commonly used types of classes:</p>
+
+    <ul>
+        <li><strong>Public class:</strong> A public class is accessible from anywhere in the code and can be used by other classes and objects.</li>
+        <li><strong>Private class:</strong> A private class is only accessible within the same file or class and cannot be used by other classes and objects.</li>
+        <li><strong>Abstract class:</strong> An abstract class is a class that cannot be instantiated and is meant to be used as a base class for other classes. It can contain abstract and non-abstract methods.</li>
+        <li><strong>Sealed class:</strong> A sealed class is a class that cannot be inherited by other classes.</li>
+        <li><strong>Static class:</strong> A static class is a class that cannot be instantiated and contains only static members such as fields, properties, and methods.</li>
+    </ul>
+
+    <h3>Access Modifiers</h3>
+
+    <p>In C#, access modifiers are used to control the access to the members of a class. Here are the access modifiers that can be used with classes:</p>
+
+    <ul>
+        <li><strong>Public:</strong> A public class is accessible from anywhere in the code.</li>
+        <li><strong>Internal:</strong> An internal class is accessible only within the same assembly (or project).</li>
+        <li><strong>Protected:</strong> A protected class is accessible only within the same class or its derived classes.</li>
+        <li><strong>Private:</strong> A private class is accessible only within the same class.</li>
+        <li><strong>Protected internal:</strong>A protected internal class is accessible within the same assembly (or project) or its derived classes, regardless of the assembly they are in.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>Classes and objects are fundamental concepts in C#. A class defines the blueprint for creating objects, and an object is an instance of a class. You can define different types of classes based on their accessibility and behavior. Access modifiers are used to control the access to the members of a class. Understanding these concepts is essential for creating robust and maintainable C# code.</p>
+
+</body>
+</html>

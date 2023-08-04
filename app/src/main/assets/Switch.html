@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch Statements in C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        pre {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ul {
+            font-size: 18px;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Switch Statements in C#</h1>
+
+    <p>The <code>switch</code> statement is used to execute one of several possible blocks of code, based on the value of a given expression. Here's the basic syntax of a <code>switch</code> statement:</p>
+
+    <pre><code>
+switch (expression)
+{
+    case value1:
+        // code to execute if expression == value1
+        break;
+    case value2:
+        // code to execute if expression == value2
+        break;
+    // more cases here...
+    default:
+        // code to execute if none of the above cases match
+        break;
+}
+    </code></pre>
+
+    <p>The expression inside the parentheses is evaluated, and then the code inside the first matching <code>case</code> block is executed. If none of the <code>case</code> blocks match, the code inside the <code>default</code> block is executed. Here's an example:</p>
+
+    <pre><code>
+int dayOfWeek = 3;
+
+switch (dayOfWeek)
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+    case 4:
+        Console.WriteLine("Thursday");
+        break;
+    case 5:
+        Console.WriteLine("Friday");
+        break;
+    default:
+        Console.WriteLine("Weekend");
+        break;
+}
+    </code></pre>
+
+    <p>In this example, the value of <code>dayOfWeek</code> is 3, so the third case block is executed, and the output is "Wednesday".</p>
+
+    <p>You can also use the <code>switch</code> statement with other data types, including strings and enums. Here's an example with a string:</p>
+
+    <pre><code>
+string fruit = "apple";
+
+switch (fruit)
+{
+    case "apple":
+        Console.WriteLine("This is an apple.");
+        break;
+    case "banana":
+        Console.WriteLine("This is a banana.");
+        break;
+    case "orange":
+        Console.WriteLine("This is an orange.");
+        break;
+    default:
+        Console.WriteLine("I don't know what this fruit is.");
+        break;
+}
+    </code></pre>
+
+    <p>In this example, the value of <code>fruit</code> is "apple", so the first case block is executed, and the output is "This is an apple."</p>
+
+    <p>These are just a few examples of what you can do with <code>switch</code> statements in C#. There are many more ways to use them, and you can also combine them with other programming constructs to create more complex logic.</p>
+</body>
+</html>
